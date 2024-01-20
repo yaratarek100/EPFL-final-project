@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="static/styling.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+            <a href="home.html" class="nav_item">Home</a>
+            <a href="/my_libreary" class="nav_item">My libreary</a>
+            <a href="prsonal.html" class="nav_item">Me</a>
+            <a href="aboutus.html" class="nav_item">Aboutus</a>
+
+            <button  id="logoutbutton">log out</button>
+            <button  id="add_new_story">add new story</button>
+        </div>
+        </nav>
+    
+    </header>
+    <div id="stories_container">
+        <!-- display stories from json in cards -->
+        {% for story in data['stories'] %}
+        <div class="story_card" >
+        <h3> {{ story.title }}</h3>
+        <p class="story_content" > {{ story.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>
+
+    </footer>
+</body>
+<script src="../static/script.js"></script>
+</html>

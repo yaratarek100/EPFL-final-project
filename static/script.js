@@ -1,4 +1,4 @@
-
+// login 
 const user_name_box=document.getElementById('user_name_box');
 const pass_wored_box=document.getElementById('pass_wored_box');
 const log_in_button=document.getElementById('log_in_button');
@@ -10,80 +10,30 @@ const pass_wored_new2=document.getElementById('pass_wored_new2');
 const sign_up= document.getElementById('sign_up');
 const sign_up_form=document.getElementById('sign_up_form');
 
+// // index
+const add_new_story=document.getElementById('add_new_story');
+const stories_container=document.getElementById('stories_container');
 
-function desplay_masseges (mass,pardiv) {
-    const paragraph=document.createElement("p");
-    paragraph.innerText = mass;
-    // paragraph.className=clas;
-    pardiv.appendChild(paragraph);
-}
+// // storyform
+const story_id=document.getElementById('story_id');
+const story_title=document.getElementById('story_title');
+const story_content=document.getElementById('story_content');
 
-// function logout()
-//    { localStorage.clear();
-//     defo();
-//     }
+document.addEventListener('DOMContentLoaded', function () {
 
-function signup()
-   { 
-    if(window.getComputedStyle(sign_up_form).display=="none"){
-        sign_up_form.style.display="block";
-    }
-    else{
-    un=user_name_new.value;
-    up=pass_wored_new1.value;
-    up2=pass_wored_new2.value;
-    if(localStorage.getItem(un)==null) { 
-        if(up==up2)   {localStorage.setItem(un,up);  }
-        else{ 
-            // passwored not simeller
-            desplay_masseges("passwored is not simeller try again",sign_up_form)
-            pass_wored_new1.value=null;
-            pass_wored_new2.value=null;
-        }
-    }
-     else{
-        //this user name is registered sign in
-        desplay_masseges("this user name is registered login",log_in_form)
-        sign_up_form.style.display="none"
-        user_name_box.value=un;
-     }
-    }
-    }
+// login  & sign up & log out
+// -----------
+// (home)  add story 
+add_new_story.addEventListener("click",go_form)
 
-  
-function login()
-{
-    un=user_name_box.value;
-    up=pass_wored_box.value;
-    if(localStorage.getItem(un)==null)
-    {
-        
-        desplay_masseges("not exsist",log_in_form)
-        
-    }
-    else
-    {
-        if (localStorage.getItem(un)==up) {
-            desplay_masseges("signed in seccessfully",log_in_form)
-        }
-        else{
-            
-            desplay_masseges("password isn't correct",log_in_form)
-        }
-    }
+// -----------
+// fill form 
+// ---------
+// delete & edite
+// ------------
 
-}
+// all events 7777777777777777
+// 888888888888888888888888888888 
 
-// function defo(){
-   
-//     if(localStorage.getItem("user")!=null){ 
-//         gp.innerText="WELL COME BACK "+localStorage.getItem("user");}
-    
-// }
-
-
-
-// lob.addEventListener("click",logout);
-log_in_button.addEventListener("click",login);
-sign_up.addEventListener("click",signup);
-// localStorage.clear();
+// add_new_story.addEventListener("click",post_card)
+})

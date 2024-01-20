@@ -1,0 +1,33 @@
+{
+"stories" :[
+    {
+        "id": 0,
+        "title": "a",
+        "content":"aaa"
+    },
+    {
+        "id": 1,
+        "title": "b",
+        "content":"bbb"
+    },
+    {
+        "id": 2,
+        "title": "c",
+        "content":"ccc"
+    }
+],
+
+"users" :[
+    {
+    "name": "yara",
+    "pass_word": 123
+},
+{
+    "name": "mohab",
+    "pass_word": 12
+},
+{
+    "name": "yarat",
+    "pass_word": 8
+}]
+}
