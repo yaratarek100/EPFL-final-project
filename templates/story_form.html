@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/styling.css" rel="stylesheet">
     <title>story</title>
 </head>
 <body>
-    <h1>new story</h1>
+    <h1>Add New Story</h1>
     <!-- <button id="post_story">post</button> -->
-    <form action="/post_story" method="get" >
+    <form id="story_form" action="/post_story" method="get" >
+        <label>story id</label>
         <input type="number" id="story_id">
+        <label>story title</label>
         <input type="text" id="story_title" >
+        <label>story content</label>
         <input type="text" id="story_content" >
         <input type="submit" id="post_story" value="post">
     </form>

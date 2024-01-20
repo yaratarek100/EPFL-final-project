@@ -85,6 +85,13 @@ display: inline-block;
 margin: auto;
 } */
 
+#story_form{
+    /* display: inline-block;
+    background-color: antiquewhite;
+    margin: 200px;
+    height: 400px;
+    width: 80px; */
+}
 .story_card{
         border-radius: 30px;
         width: 20%;
