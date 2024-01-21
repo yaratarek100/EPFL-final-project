@@ -84,6 +84,14 @@ width: 70%;
 display: inline-block;
 margin: auto;
 } */
+#card_buttons{
+    position: relative;
+    bottom: -150px
+}
+#ans{
+    text-decoration:none ;
+    color: white;
+}
 
 #story_form{
     /* display: inline-block;

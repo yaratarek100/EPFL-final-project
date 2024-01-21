@@ -10,23 +10,28 @@
     <header>
         <nav>
             <div>
-            <a href="home.html" class="nav_item">Home</a>
-            <a href="/my_libreary" class="nav_item">My libreary</a>
-            <a href="prsonal.html" class="nav_item">Me</a>
-            <a href="aboutus.html" class="nav_item">Aboutus</a>
+            <a href="/" class="nav_item">Home</a>
+            <a href="/home" class="nav_item">My libreary</a>
+            <a href="/prsonal" class="nav_item">Me</a>
+            <a href= "/aboutus" class="nav_item">Aboutus</a>
 
             <button  id="logoutbutton">log out</button>
-            <button  id="add_new_story">add new story</button>
+            <button  id="add_new_story"> <a id="ans" href="/add_story" >add new story </a> </button>
         </div>
         </nav>
     
     </header>
     <div id="stories_container">
         <!-- display stories from json in cards -->
-        {% for story in data['stories'] %}
-        <div class="story_card" >
+        {% for story in data['stoies'] %}
+        
+        <div class="story_card" id="{{loop.index0}}">
         <h3> {{ story.title }}</h3>
-        <p class="story_content" > {{ story.content }}</p>
+        <p class="story_content" > {{ story.content }} </p>
+        <div id="card_buttons">
+            <button id="edite">edite</button>
+            <button id="delet">delet</button>
+        </div>
         </div>
         {% endfor %}
     </div>

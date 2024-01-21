@@ -13,33 +13,28 @@ const sign_up_form=document.getElementById('sign_up_form');
 // // home
 
 
-// // storyform
-const story_id=document.getElementById('story_id');
-const story_title=document.getElementById('story_title');
-const story_content=document.getElementById('story_content');
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 let current_page = window.location.pathname;
-console.log(current_page);
-// login  & sign up & log out
-// -------------------------------------------------------------------------------------------
-// (home) add new story --> (story form )
-// 8888888888888888888 / -> /home
-if (current_page === '/') {
-const add_new_story=document.getElementById('add_new_story');
-// add new story --> (story form )
-function go_form(){  window.location.href = '/add_story';}
-add_new_story.addEventListener("click", go_form )
 
-}
-// --------------------------------------------------------------------------------------------
-// fill form 
-// ---------
-// delete & edite
-// ------------
+if(current_page='/'){
+    const story_cards = document.getElementsByClassName('story_card');
+    for (const story_card of story_cards) {
+    story_card.addEventListener('click', function() {
+        let card_id = story_card.id;
+        window.location.href = '/display_story/'+card_id;
+    });  }}
 
-// all events 7777777777777777
-// 888888888888888888888888888888 
+if(current_page='/edit_story'){
+    const story_id=document.getElementById('story_id');
+    const story_title=document.getElementById('story_title');
+    const story_content=document.getElementById('story_content');
 
-// add_new_story.addEventListener("click",post_card)
+    story_id.value='{{story.id}}';
+    story_title.value='{{story.title}}';
+    story_content.value='{{story.story_content}}';
+    }
+
 });

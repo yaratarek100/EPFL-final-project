@@ -9,15 +9,18 @@
 <body>
     <h1>Add New Story</h1>
     <!-- <button id="post_story">post</button> -->
-    <form id="story_form" action="/post_story" method="get" >
+    <div id="story_form">
+    <form  action="/post_story" method="get" >
         <label>story id</label>
-        <input type="number" id="story_id">
+        <input type="number" id="story_id" name="story_id">
         <label>story title</label>
-        <input type="text" id="story_title" >
+        <input type="text" id="story_title" name="story_title">
         <label>story content</label>
-        <input type="text" id="story_content" >
+        <input type="text" id="story_content" name="story_content" >
         <input type="submit" id="post_story" value="post">
     </form>
+    
+</div>
 
     
 </body>
