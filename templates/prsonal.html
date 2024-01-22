@@ -11,9 +11,15 @@
       
     </header>
     <div>
-        <p id="d_story_id">{{story.id}}</p>
+        <div id="card_buttons">
+            <button id="edite_button"><a href="/{{id}}/edit_story">Edit</a></button>
+            <button id="delet_button"><a href="/{{id}}/delet_story">Delet</a></button>
+        </div>
+        
         <p id="d_story_title">{{story.title}}</p>
+        <p id="d_story_title">{{story.description}}</p>
         <p id="d_story_content">{{story.content}}</p>
+        <p id="d_story_id">{{story.date}}</p>
         
     </div>
 </body>

@@ -7,16 +7,16 @@
     <title>story</title>
 </head>
 <body>
-    <h1>Add New Story</h1>
-    <!-- <button id="post_story">post</button> -->
-    <div id="story_form">
-    <form  action="/post_story" method="get" >
-        <label>story id</label>
-        <input type="number" id="story_id" name="story_id">
+    <!-- defolt state wtll be editing .... for adding new one javascript will change some values -->
+    <h1 id="form_title">Edit Story</h1>
+    <div id="story_div">
+    <form  action="/{{id}}/post_edited_story" method="get" id="story_form" >
         <label>story title</label>
-        <input type="text" id="story_title" name="story_title">
+        <input type="text" id="story_title" name="story_title" value="{{story.title}}">
+        <label>story description</label>
+        <input type="text" id="story_description" name="story_description" value="{{story.description}}">
         <label>story content</label>
-        <input type="text" id="story_content" name="story_content" >
+        <input type="text" id="story_content" name="story_content" value="{{story.content}}">
         <input type="submit" id="post_story" value="post">
     </form>
     

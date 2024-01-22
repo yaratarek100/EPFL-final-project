@@ -24,17 +24,8 @@ const story_content=document.getElementById('story_content');
 document.addEventListener('DOMContentLoaded', function () {
    
 
-// function desplay_masseges (mass,pardiv) {
-//     const paragraph=document.createElement("p");
-//     paragraph.innerText = mass;
-//     // paragraph.className=clas;
-//     pardiv.appendChild(paragraph);
-// }
 
-// // function logout()
-// //    { localStorage.clear();
-// //     defo();
-// //     }
+
 
 // function signup()
 //    { 
@@ -97,13 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function loginf(){
 
-    var newLocation = '/home.html';
+    let newLocation = '/home.html';
 
     window.location.href = newLocation;
 
 }
 // function add_new_stor(){
-//     var newLocation = '/add_story';
+//     let newLocation = '/add_story';
 
 //     window.location.href = newLocation;
 // }

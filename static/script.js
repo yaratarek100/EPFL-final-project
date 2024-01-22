@@ -24,17 +24,18 @@ if(current_page='/'){
     for (const story_card of story_cards) {
     story_card.addEventListener('click', function() {
         let card_id = story_card.id;
-        window.location.href = '/display_story/'+card_id;
+        window.location.href = '/'+card_id;
     });  }}
 
-if(current_page='/edit_story'){
-    const story_id=document.getElementById('story_id');
-    const story_title=document.getElementById('story_title');
-    const story_content=document.getElementById('story_content');
+    if (window.location.pathname.startsWith('/add_story')) {
+    const story_form =document.getElementById('story_form')
+    const form_title=document.getElementById('form_title');
 
-    story_id.value='{{story.id}}';
-    story_title.value='{{story.title}}';
-    story_content.value='{{story.story_content}}';
+    form_title.innerText="Add New Story";
+    story_form.action="/post_new_story";
+   
     }
+    function logout()
+       { localStorage.clear();}
 
 });
