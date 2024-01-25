@@ -6,10 +6,11 @@ let is_user=localStorage.getItem("current_user");
 // adding & editing form
 
     if (window.location.pathname.startsWith('/add_story')) {
+        
         // change function of the edit form
         const story_form =document.getElementById('story_form');
-        const form_title=document.getElementById('form_title');
-        form_title.innerText="Add New Story";
+        const story_form_title=document.getElementById('story_form_title');
+        story_form_title.innerText="Add New Story";
         story_form.action="/post_new_story";
         }      
 

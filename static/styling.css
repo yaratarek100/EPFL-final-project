@@ -6,7 +6,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: #eee;
+    background-color: #e6f4f9;
     display: flex;
     font-family: sans-serif;
     padding: 5%;
@@ -24,7 +24,7 @@ body{
 /* home */
 
 nav {
-padding: 3%;
+padding: 5%;
 position: absolute;
 display: block;
 top: 0;
@@ -32,27 +32,34 @@ height:    334px; ;
 width: 100%;
 background-color: white;
 text-align: left;
+z-index: -2;
 }
 img{
     position: absolute;
     top: 0;
     right: 0;
     mask-image: linear-gradient(to right, transparent 2%, black 10%);
+    z-index: -1;
 }
 nav button{
     display: inline-block;
     width: 9%;
     height: 40px;
     margin: 1%;
-    font-size: 161%;
+    font-size: 1.5rem;
 }
 
 nav p{
-    font-size: 220%;
+    font-size: 244%;
     margin: 1.5%;
-    /* margin-top: 20px; */
-    
+    color: #9f4404;
+    font-family: cursive;
 }
+    
+.story_card .story_element, .story_card,#dis_cont {
+    background-color: #FABF4D;
+}
+
 #home{
     padding: 0;
     margin: 0;
