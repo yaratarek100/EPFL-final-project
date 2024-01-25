@@ -56,8 +56,13 @@ nav p{
     font-family: cursive;
 }
     
-.story_card .story_element, .story_card,#dis_cont {
+.story_card .story_element, .story_card,#dis_cont ,#rundom_button{
     background-color: #FABF4D;
+}
+
+#rundom_button{
+    position: absolute;
+    top: 260px;
 }
 
 #home{

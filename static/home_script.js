@@ -14,6 +14,7 @@ if(current_page='/' || current_page.startsWith('/user')){
     let add_story_button = document.getElementById('add_story_button');
     let logout_button = document.getElementById('logout_button');
     let name_p =document.getElementById("name_p");
+    const rundom_button=document.getElementById("rundom_button")
 
 function user_mode (){
     // display name & enable  -edit -delete -add -logout
@@ -57,5 +58,14 @@ function user_mode (){
                 user_mode();  
                 
                 }
+
+                function get_rundom()
+                {
+                let no_stoyies=story_cards.length;
+                let randomNumber = Math.floor(Math.random() * no_stoyies) + 0;
+                window.location.href = '/story/'+randomNumber;
+                }
+                rundom_button.addEventListener("click",get_rundom);
+                
 }
 });
