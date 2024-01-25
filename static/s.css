@@ -1,0 +1,99 @@
+*{
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    }    
+body {
+    /* background-image:  url("https://i.pinimg.com/564x/a4/72/bf/a472bfb4e3226bee72321be83930acbc.jpg"); */
+    /* background-image:  url("https://i.pinimg.com/564x/f7/1e/9f/f71e9fed6fbdfed8070d999e2c5194d6.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+nav {
+    background:transparent;
+    border-radius: 20px;
+    height:70px ;
+    text-align: left;
+
+}
+
+.nav_item{
+    color: rgb(255, 102, 0);
+    font-size: 30px;
+    text-decoration: none;
+    padding: 20px;
+}
+#nav_items{
+    height: fit-content;
+    width: fit-content;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    left: 0;
+}
+#logoutbutton , #add_new_story{
+  
+    position: static;
+    height: 40px;
+    right: 0px;
+    margin: 10px;
+    background-color:rgba(255, 166, 0, 0.815);
+    font-size: 30px;
+    border-radius: inherit;
+    border: none;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+
+
+}
+.story_content{
+width: 90%;
+margin: auto;
+overflow: hidden;
+
+
+
+}
+
+
+/* 
+img{
+height: 50%;
+width: 70%;
+display: inline-block;
+margin: auto;
+} */
+#card_buttons{
+    position: relative;
+    bottom: -150px
+}
+#ans{
+    text-decoration:none ;
+    color: white;
+}
+
+#name_p{
+    display: none;
+}
+#story_form{
+    display: inline-block;
+    background-color: antiquewhite;
+    margin: 200px;
+    height: 400px;
+    width: 80%;
+}
+.story_card{
+        border-radius: 30px;
+        width: 20%;
+        height: 300px;
+        display: inline-block;
+        padding: 20px;
+        background-color: rgb(70, 179, 85);
+        margin: 20px;
+    
+
+}
+

@@ -7,7 +7,9 @@
     <link href="../static/styling.css" rel="stylesheet">
 </head>
 <body>
-    <p >{{response}}</p>
+    <div class="container">
+    <h1 class="form_title">Sign Up</h1>
+    <p class="res">{{response}}</p>
     <form method="get" action="/signupcheck">
         <p>enter your name</p>
         <input type="text" name="user_name_new" minlength="4" maxlength="15" required>
@@ -17,10 +19,12 @@
         <input type="submit"  id="sign_up_button" value="sign up">
     </form>
 
+    <div class="last">
+    <p  >Already have an account...  </p>
+    <button  id="go_to_signin" ><a href="/login">Log In</a> </button>
+    </div>
 
-    <p>Already have an account...  
-     </p>
-    <button  id="go_to_signin" ><a href="/login">sign in</a> </button>
+</div>
 </body>
 <script src="../static/script.js"></script>
 </html>

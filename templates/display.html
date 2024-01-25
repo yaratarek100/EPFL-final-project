@@ -7,19 +7,16 @@
     <link href="../static/styling.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-      
-    </header>
-    <div>
+    <div class="container">
         <div id="card_buttons">
             <button id="edite_button"><a href="/{{id}}/edit_story">Edit</a></button>
             <button id="delet_button"><a href="/{{id}}/delet_story">Delet</a></button>
         </div>
         
-        <p id="d_story_title">{{story.title}}</p>
-        <p id="d_story_title">{{story.description}}</p>
-        <p id="d_story_content">{{story.content}}</p>
-        <p id="d_story_id">{{story.date}}</p>
+        <p class="story_element">{{story.title}}</p>
+        <p class="story_element">{{story.description}}</p>
+        <p class="story_element">{{story.content}}</p>
+        <p class="story_element">{{story.date}}</p>
         
     </div>
 </body>
