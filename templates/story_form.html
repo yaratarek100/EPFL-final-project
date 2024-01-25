@@ -12,11 +12,11 @@
     <div id="story_div">
     <form  action="/{{id}}/post_edited_story" method="get" id="story_form" >
         <label>story title</label>
-        <input type="text" id="story_title" name="story_title" value="{{story.title}}">
+        <input type="text" id="story_title" name="story_title" value="{{story.title}}" maxlength="30">
         <label>story description</label>
-        <input type="text" id="story_description" name="story_description" value="{{story.description}}">
+        <input type="text" id="story_description" name="story_description" value="{{story.description}}" maxlength="100">
         <label>story content</label>
-        <input type="text" id="story_content" name="story_content" value="{{story.content}}">
+        <input type="text" id="story_content" name="story_content" value="{{story.content}}" maxlength="1500">
         <input type="submit" id="post_story" value="post">
     </form>
     

@@ -10,18 +10,15 @@
     <header>
         <nav>
             <div>
-            <a href="/" class="nav_item">Home</a>
-            <a href="/home" class="nav_item">My libreary</a>
-            <a href="/prsonal" class="nav_item">Me</a>
-            <a href= "/aboutus" class="nav_item">Aboutus</a>
-
-            <button  id="logoutbutton" >log out</button>
-            <button ><a href="/login">log in</a></button>
-            <button  id="add_new_story"> <a id="ans" href="/add_story" >add new story </a> </button>
+            <button  id="login_button"><a href="/login">log in</a></button>
+            <button  id="sign_button"><a href="/signup">sign up</a></button>
+            <button  id="add_story_button"> <a id="ans" href="/add_story" >add new story </a> </button>
+            <button  id="logout_button">log out</button>
         </div>
         </nav>
     
     </header>
+    <p id="name_p">{{name}}</p>
     <div id="stories_container">
         <!-- display stories from json in cards -->
         {% for story in data['stoies'] %}
@@ -29,6 +26,7 @@
         <div class="story_card" id="{{loop.index0}}">
         <h3> {{ story.title }}</h3>
         <p class="story_content" > {{ story.description }} </p>
+        <p > {{ story.date }} </p>
         </div>
         {% endfor %}
     </div>
@@ -37,4 +35,8 @@
     </footer>
 </body>
 <script src="../static/script.js"></script>
+<script src="../static/home_script.js"></script>
+
+
+
 </html>

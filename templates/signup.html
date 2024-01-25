@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link href="../static/styling.css" rel="stylesheet">
+</head>
+<body>
+    <p >{{response}}</p>
+    <form method="get" action="/signupcheck">
+        <p>enter your name</p>
+        <input type="text" name="user_name_new" minlength="4" maxlength="15" required>
+        <p>enter your pass word</p>
+        <input type="password" name="pass_wored_new1" minlength="3"  maxlength="15" required>
+        <input type="password" name="pass_wored_new2" minlength="3" maxlength="15" required>
+        <input type="submit"  id="sign_up_button" value="sign up">
+    </form>
+
+
+    <p>Already have an account...  
+     </p>
+    <button  id="go_to_signin" ><a href="/login">sign in</a> </button>
+</body>
+<script src="../static/script.js"></script>
+</html>

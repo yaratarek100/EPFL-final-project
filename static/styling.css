@@ -93,12 +93,15 @@ margin: auto;
     color: white;
 }
 
+#name_p{
+    display: none;
+}
 #story_form{
-    /* display: inline-block;
+    display: inline-block;
     background-color: antiquewhite;
     margin: 200px;
     height: 400px;
-    width: 80px; */
+    width: 80%;
 }
 .story_card{
         border-radius: 30px;
