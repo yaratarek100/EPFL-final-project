@@ -66,6 +66,12 @@ function user_mode (){
                 window.location.href = '/story/'+randomNumber;
                 }
                 rundom_button.addEventListener("click",get_rundom);
+                sign_button.addEventListener("click",function(){
+                    window.location.href = '/signup';
+                });
+                login_button.addEventListener("click",function(){
+                    window.location.href = '/login';
+                });
                 
 }
 });

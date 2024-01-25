@@ -63,12 +63,15 @@ nav p{
 #rundom_button{
     position: absolute;
     top: 260px;
+    z-index: 4;
 }
 
 #home{
     padding: 0;
     margin: 0;
     text-align: center;
+    position: relative;
+    z-index: -4;
 }
 
 #stories_container{
