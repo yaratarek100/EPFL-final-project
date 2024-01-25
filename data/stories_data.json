@@ -1,16 +1,48 @@
 {
  "stoies": [
-  {
-   "title": "",
-   "description": "",
-   "content": "",
-   "date": "01/25/24"
-  },
-  {
-   "title": "",
-   "description": "",
-   "content": "",
-   "date": "01/25/24"
-  }
- ]
+    {
+      "title": "The Brave Little Bunny",
+      "description": "A short children's story about a small bunny on a brave adventure.",
+      "content": "Once upon a time, there was a brave little bunny named Benny. One day, Benny decided to explore the enchanted forest. Along the way, he met new animal friends and faced challenges. In the end, Benny discovered that courage comes in all sizes.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    },
+    {
+      "title": "The Magic Kite Adventure",
+      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+      "date":"01/25/24"
+    }
+
+  ]
+
 }

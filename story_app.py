@@ -52,12 +52,13 @@ def write_file (file_path, data) :
 @app.route("/")
 def home ():
     data =read_file(stories_file)
-    return render_template('home.html', data=data) 
+    username="Dear"
+    return render_template('home.html', data=data, name=username) 
 
 @app.route("/user/<username>")
 def user_home(username):
     data =read_file(stories_file)  
-    return render_template('home.html', data=data,name=username) 
+    return render_template('home.html', data=data, name=username) 
 
 @app.route("/login")
 def go_login() :  

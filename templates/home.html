@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home</title>
+    <!-- <link href="../static/home.css" rel="stylesheet"> -->
     <link href="../static/styling.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <div>
+<body id="home">
+            <nav >
+                <img src="https://i.ibb.co/Hdg5qLS/Children-hung-on-a-tree-branch-sunny-day-vector-image-on-Vector-Stock.jpg" alt="" > 
+                <div id="greating">  
+               <p >Hello <span id="name_p">{{name}}</span>...<br>
+                   let's read a new story...
+               </p>
+               </div>
             <button  id="login_button"><a href="/login">log in</a></button>
             <button  id="sign_button"><a href="/signup">sign up</a></button>
-            <button  id="add_story_button"> <a id="ans" href="/add_story" >add new story </a> </button>
+            <button  id="add_story_button" style="background-color: #79a82e;"> 
+                <a style="background-color: #79a82e;" href="/add_story" >add story </a> </button>
             <button  id="logout_button">log out</button>
-        </div>
-        </nav>
+            </nav>
+
     
-    </header>
-    <p id="name_p">{{name}}</p>
     <div id="stories_container">
         <!-- display stories from json in cards -->
         {% for story in data['stoies'] %}
         
         <div class="story_card" id="{{loop.index0}}">
-        <h3> {{ story.title }}</h3>
-        <p class="story_content" > {{ story.description }} </p>
-        <p > {{ story.date }} </p>
+            <!-- in card -->
+        <h3 class="story_element"> {{ story.title }}</h3>
+        <p class="story_element" > {{ story.description }} </p>
+        <p class="story_element"> {{ story.date }} </p>
         </div>
         {% endfor %}
     </div>
@@ -34,7 +39,6 @@
 
     </footer>
 </body>
-<script src="../static/script.js"></script>
 <script src="../static/home_script.js"></script>
 
 

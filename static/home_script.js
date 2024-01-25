@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // home page for 2 cases
 if(current_page='/' || current_page.startsWith('/user')){
     // PAGE ELEMENTS
-    const story_cards = document.getElementsByClassName('story_card');
+    let story_cards = document.getElementsByClassName('story_card');
     let login_button = document.getElementById('login_button');
     let sign_button = document.getElementById('sign_button');
     let add_story_button = document.getElementById('add_story_button');
     let logout_button = document.getElementById('logout_button');
-    let name_p =document.getElementById("name_p");//hiden just for user name value
+    let name_p =document.getElementById("name_p");
 
 function user_mode (){
     // display name & enable  -edit -delete -add -logout
@@ -23,7 +23,6 @@ function user_mode (){
     // display add & sign out
         add_story_button.style.display = "inline-block";
         logout_button.style.display = "inline-block";
-        name_p.style.display = "inline-block";
     // can log out-->clear local storage
     // and redirect to home page
         logout_button.addEventListener("click", function(){
@@ -46,6 +45,7 @@ function user_mode (){
             logout_button.style.display = "none";  }
             else{
                 user_mode();
+                name_p.innerText=localStorage.getItem("current_user")
             }
             }
 // only users....
@@ -53,7 +53,6 @@ function user_mode (){
                 // store user
                 const user_name=name_p.innerText
                 localStorage.setItem("current_user",user_name);
-                console.log("set"+user_name);
 
                 user_mode();  
                 

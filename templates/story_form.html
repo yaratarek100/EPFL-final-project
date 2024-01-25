@@ -13,11 +13,11 @@
         <h1 class="form_title">Edit Story</h1>
     <form  action="/{{id}}/post_edited_story" method="get" id="story_form" >
         <label>story title</label>
-        <input type="text" class="story_element" name="story_title" value="{{story.title}}" maxlength="30">
+        <input type="text" class="story_element" name="story_title" value="{{story.title}}" maxlength="30" required>
         <label>story description</label>
-        <input type="text" class="story_element" name="story_description" value="{{story.description}}" maxlength="100">
+        <input type="text" class="story_element" name="story_description" value="{{story.description}}" maxlength="100" required>
         <label>story content</label>
-        <input type="text" class="story_element" name="story_content" value="{{story.content}}" maxlength="1500">
+        <input type="text" class="story_element" name="story_content" value="{{story.content}}" maxlength="1500" required>
         <input type="submit" id="post_story" value="post">
     </form>
     

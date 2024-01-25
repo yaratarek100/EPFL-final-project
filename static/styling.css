@@ -21,11 +21,60 @@ body{
     text-align: center;
 }
 
+/* home */
 
+nav {
+padding: 3%;
+position: absolute;
+display: block;
+top: 0;
+height:    334px; ;
+width: 100%;
+background-color: white;
+text-align: left;
+}
+img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    mask-image: linear-gradient(to right, transparent 2%, black 10%);
+}
+nav button{
+    display: inline-block;
+    width: 9%;
+    height: 40px;
+    margin: 1%;
+    font-size: 161%;
+}
 
+nav p{
+    font-size: 220%;
+    margin: 1.5%;
+    /* margin-top: 20px; */
+    
+}
+#home{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 
+#stories_container{
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    text-align: center;
+}
+.story_card{
+    width: 18%;
+    display: inline-block;
+    max-height: 300px;
+    min-height: 300px;
+    padding: 1%;
+    margin: 2%;
+}
 
-/* all forms (login-logout-add-edite-display) */
+/* all forms (login-logout-add-edite) */
 .form_title , .res {
 margin-bottom: 5%;
 }
@@ -46,9 +95,10 @@ input[type="text"], input[type="password"] ,.story_element {
 
 .story_element{
     margin-top: 5%;
-    min-height: 36px;
-    max-height: fit-content;
-    padding: 2% 2% 2% 2%;
+    height: fit-content;
+    font-size: 93%;
+    padding: 9%;
+    border-radius: 4px;
     }
 input[type="submit"]:hover, button:hover , a :hover {
     opacity: .7;
