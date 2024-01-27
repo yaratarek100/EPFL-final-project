@@ -105,14 +105,15 @@ def logincheck() :
      users=data['users']
      for user in users :
          if user['name']==ui_name  :
+            # user_found = True 
             if user['password']==ui_pass :
                 return redirect (url_for("user_home", username=ui_name) )
             else :
                 mass="password isn't correct"
                 return render_template("/login.html", response=mass) 
-         else :
-            mass="user name isn't correct"
-            return render_template("/login.html", response=mass)  
+     else :
+        mass="user name isn't correct"
+        return render_template("/login.html", response=mass)  
         
 
 # CRUD 
