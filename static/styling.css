@@ -79,6 +79,11 @@ nav p{
     top: 400px;
     width: 100%;
     text-align: center;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 .story_card{
     width: 18%;

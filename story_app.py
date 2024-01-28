@@ -86,15 +86,15 @@ def su_check() :
             if user['name']==user_name_new :
                 mass="this name is already exist, try another one... "               
                 return render_template("signup.html", response=mass)  
+        else :
+            if pass_wored_new1==pass_wored_new2 :
+                new_user= creat_new_user(user_name_new,pass_wored_new1)
+                data['users'].append(new_user)
+                write_file (users_file, data)
+                return redirect (url_for("user_home" ,username=user_name_new))
             else :
-                if pass_wored_new1==pass_wored_new2 :
-                    new_user= creat_new_user(user_name_new,pass_wored_new1)
-                    data['users'].append(new_user)
-                    write_file (users_file, data)
-                    return redirect (url_for("user_home" ,username=user_name_new))
-                else :
-                    mass="passwored is not simeller try again"
-                    return render_template("signup.html", response=mass)   
+                mass="passwored is not simeller try again"
+                return render_template("signup.html", response=mass)   
 
 
 @app.route("/logincheck")
@@ -107,10 +107,12 @@ def logincheck() :
          if user['name']==ui_name  :
             # user_found = True 
             if user['password']==ui_pass :
-                return redirect (url_for("user_home", username=ui_name) )
+                return redirect (url_for("user_home", username=ui_name) ) 
+                       
             else :
                 mass="password isn't correct"
                 return render_template("/login.html", response=mass) 
+            
      else :
         mass="user name isn't correct"
         return render_template("/login.html", response=mass)  
