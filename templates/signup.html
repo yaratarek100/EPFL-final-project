@@ -12,9 +12,10 @@
     <p class="res">{{response}}</p>
     <form method="get" action="/signupcheck">
         <p>enter your name</p>
-        <input type="text" name="user_name_new" minlength="4" maxlength="15" required>
+        <input type="text" name="user_name_new" pattern="[A-Za-z ]+" title="Enter text only" minlength="4" maxlength="15" required>
         <p>enter your pass word</p>
         <input type="password" name="pass_wored_new1" minlength="3"  maxlength="15" required>
+        <p>confirm your pass word</p>
         <input type="password" name="pass_wored_new2" minlength="3" maxlength="15" required>
         <input type="submit"  id="sign_up_button" value="sign up">
     </form>

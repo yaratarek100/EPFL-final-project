@@ -15,6 +15,7 @@ if(current_page='/' || current_page.startsWith('/user')){
     let logout_button = document.getElementById('logout_button');
     let name_p =document.getElementById("name_p");
     const rundom_button=document.getElementById("rundom_button")
+    let no_stoyies=story_cards.length;
 
 function user_mode (){
     // display name & enable  -edit -delete -add -logout
@@ -37,9 +38,20 @@ function user_mode (){
                 let card_id = story_card.id;
                 window.location.href = '/story/'+card_id;
             }); }
- 
-// default case
 
+        if (no_stoyies==0){
+            rundom_button.style.display = "none";
+        }    
+
+            function get_rundom()
+            {
+            let randomNumber = Math.floor(Math.random() * no_stoyies) + 0;
+            window.location.href = '/story/'+randomNumber;
+            }
+            // rundom story 
+            rundom_button.addEventListener("click",get_rundom);    
+ 
+        // default case
         if(current_page='/'){
             if (is_user==null){
             add_story_button.style.display = "none";
@@ -49,29 +61,14 @@ function user_mode (){
                 name_p.innerText=localStorage.getItem("current_user")
             }
             }
-// only users....
-            if (window.location.pathname.startsWith('/user')) {
-                // store user
-                const user_name=name_p.innerText
-                localStorage.setItem("current_user",user_name);
+        // only users....
+        if (window.location.pathname.startsWith('/user')) {
+            // store user
+            const user_name=name_p.innerText
+            localStorage.setItem("current_user",user_name);
 
-                user_mode();  
-                
-                }
-
-                function get_rundom()
-                {
-                let no_stoyies=story_cards.length;
-                let randomNumber = Math.floor(Math.random() * no_stoyies) + 0;
-                window.location.href = '/story/'+randomNumber;
-                }
-                rundom_button.addEventListener("click",get_rundom);
-                sign_button.addEventListener("click",function(){
-                    window.location.href = '/signup';
-                });
-                login_button.addEventListener("click",function(){
-                    window.location.href = '/login';
-                });
+            user_mode();  
+            }
                 
 }
 });

@@ -56,7 +56,7 @@ nav p{
     font-family: cursive;
 }
     
-.story_card .story_element, .story_card,#dis_cont ,#rundom_button{
+.story_card .story_element, .story_card,#dis_cont {
     background-color: #FABF4D;
 }
 
@@ -76,14 +76,15 @@ nav p{
 
 #stories_container{
     position: absolute;
-    top: 400px;
+    top: 390px;
+    padding: 0% 0%;
     width: 100%;
     text-align: center;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content:flex-start;
 }
 .story_card{
     width: 18%;
@@ -91,7 +92,7 @@ nav p{
     max-height: 300px;
     min-height: 300px;
     padding: 1%;
-    margin: 2%;
+    margin: 3%;
 }
 
 /* all forms (login-logout-add-edite) */
@@ -136,4 +137,21 @@ input[type="submit"], button , a {
     text-decoration: none;
     font-size: 94%;
 
+}
+
+/* display story */
+
+.story_button{
+    font-size: 160%;
+    position: relative;
+    padding: 4% 12%;
+    top: -8px;
+    margin: 0px 5% ;
+    display: inline-block;
+    height: 13%;
+    width: auto;
+}
+
+#delet_button{
+    background-color: #C92A27;
 }

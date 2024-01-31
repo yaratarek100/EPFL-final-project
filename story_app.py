@@ -2,6 +2,9 @@ import json
 import flask
 import datetime
 from flask import Flask, redirect, render_template, url_for
+from flask import abort
+
+# app = flask.Flask("guests")
 app = Flask(__name__)
 # data_files
 stories_file ='data/stories_data.json'
@@ -73,29 +76,25 @@ def go_signup() :
 # check user
 @app.route("/signupcheck")
 def su_check() :
-     user_name_new=flask.request.args.get("user_name_new")
-     pass_wored_new1=flask.request.args.get("pass_wored_new1")
-     pass_wored_new2=flask.request.args.get("pass_wored_new2")
-     if user_name_new=="no_user" :
-          mass="this name is already exist, try another one... "               
-          return render_template("signup.html", response=mass) 
-     else :
-        data =read_file(users_file)
-        users=data['users']
-        for user in users :
-            if user['name']==user_name_new :
-                mass="this name is already exist, try another one... "               
-                return render_template("signup.html", response=mass)  
-        else :
-            if pass_wored_new1==pass_wored_new2 :
-                new_user= creat_new_user(user_name_new,pass_wored_new1)
-                data['users'].append(new_user)
-                write_file (users_file, data)
-                return redirect (url_for("user_home" ,username=user_name_new))
-            else :
-                mass="passwored is not simeller try again"
-                return render_template("signup.html", response=mass)   
+    user_name_new=flask.request.args.get("user_name_new")
+    pass_wored_new1=flask.request.args.get("pass_wored_new1")
+    pass_wored_new2=flask.request.args.get("pass_wored_new2")
 
+    data =read_file(users_file)
+    users=data['users']
+    for user in users :
+        if user['name']==user_name_new :
+            mass="this name is already exist, try another one... "               
+            return render_template("signup.html", response=mass)  
+    else :
+        if pass_wored_new1==pass_wored_new2 :
+            new_user= creat_new_user(user_name_new,pass_wored_new1)
+            data['users'].append(new_user)
+            write_file (users_file, data)
+            return redirect (url_for("user_home" ,username=user_name_new))
+        else :
+            mass="passwored is not simeller try again"
+            return render_template("signup.html", response=mass)   
 
 @app.route("/logincheck")
 def logincheck() :  
@@ -114,17 +113,20 @@ def logincheck() :
                 return render_template("/login.html", response=mass) 
             
      else :
-        mass="user name isn't correct"
+        mass="user name isn't found"
         return render_template("/login.html", response=mass)  
         
-
 # CRUD 
 @app.route("/story/<int:id>")
 def display_story (id):
     data =read_file(stories_file)
-    story=data['stoies'][id]
-    return render_template('display.html', story=story,id=id)
-
+    srories_num =len(data['stoies'])
+    if(id>= srories_num) :
+        abort(404)
+    else :
+        story=data['stoies'][id]
+        return render_template('display.html', story=story,id=id)
+        
 @app.route("/<int:id>/delet_story")
 def delet_story (id):  
     data =read_file(stories_file)
@@ -135,11 +137,7 @@ def delet_story (id):
 
 @app.route("/add_story")
 def add_story ():
-    empity_story={
-    "title": "",
-    "description" :"",
-    "content": ""
-    }
+    empity_story={ }
     return render_template('story_form.html',story= empity_story)
 
 @app.route("/post_new_story")
