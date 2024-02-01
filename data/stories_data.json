@@ -1,46 +1,40 @@
 {
-    "stoies": [
-     {
-      "title": "The Magic Kite Adventure 3",
-      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
-      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
-      "date": "01/27/24"
-     },
-     {
-      "title": "The Magic Kite Adventure",
-      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
-      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
-      "date": "01/25/24"
-     },
-     {
-      "title": "The Magic Kite Adventure 4",
-      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
-      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
-      "date": "01/27/24"
-     },
-     {
-      "title": "The Magic Kite Adventure 5",
-      "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
-      "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
-      "date": "01/28/24"
-     },
-     {
-      "title": "The Boy Who Cried Wolf",
-      "description": "Lying breaks trust, and no one believes a liar \u2014 even when they tell the truth.",
-      "content": "Once, there was a boy who became bored when he watched over the village sheep grazing on the hillside. To entertain himself, he sang out, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d  When the villagers heard the cry, they ran up the hill to drive the wolf away. But when they arrived, they saw no wolf. The boy was amused when he saw their angry faces.  \u201cDon\u2019t scream wolf when there is no wolf, boy!\u201d the villagers warned. They angrily went back down the hill.  Later, the shepherd boy cried out once again, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d To his amusement, the villagers came running up the hill to scare the wolf away.  As they saw there was no wolf, they said strictly, \u201cSave your frightened cry for when there really is a wolf! Don\u2019t cry \u2018wolf\u2019 when there is no wolf!\u201d But the boy grinned at their words while they walked, grumbling down the hill once more.  Later, the boy saw a real wolf sneaking around his flock. Alarmed, he jumped on his feet and cried out as loud as he could, \u201cWolf! Wolf!\u201d But the ",
-      "date": "01/30/24"
-     },
-     {
-      "title": "new story",
-      "description": "a new story for testing",
-      "content": "bla bla bla",
-      "date": "01/27/24"
-     },
-     {
-      "title": "The Boy Who Cried Wolf 2",
-      "description": "Lying breaks trust, and no one believes a liar \u2014 even when they tell the truth.",
-      "content": "Once, there was a boy who became bored when he watched over the village sheep grazing on the hillside. To entertain himself, he sang out, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d  When the villagers heard the cry, they ran up the hill to drive the wolf away. But when they arrived, they saw no wolf. The boy was amused when he saw their angry faces.  \u201cDon\u2019t scream wolf when there is no wolf, boy!\u201d the villagers warned. They angrily went back down the hill.  Later, the shepherd boy cried out once again, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d To his amusement, the villagers came running up the hill to scare the wolf away.  As they saw there was no wolf, they said strictly, \u201cSave your frightened cry for when there really is a wolf! Don\u2019t cry \u2018wolf\u2019 when there is no wolf!\u201d But the boy grinned at their words while they walked, grumbling down the hill once more.  Later, the boy saw a real wolf sneaking around his flock. Alarmed, he jumped on his feet and cried out as loud as he could, \u201cWolf! Wolf!\u201d But the ",
-      "date": "01/30/24"
-     }
-    ]
-   }
+ "stoies": [
+  {
+   "title": "The Magic Kite Adventure 3",
+   "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+   "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+   "date": "01/27/24"
+  },
+  {
+   "title": "The Magic Kite Adventure 44",
+   "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+   "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+   "date": "02/01/24"
+  },
+  {
+   "title": "The Magic Kite Adventure 5",
+   "description": "A short story about a magical kite that takes a young girl on an exciting journey.",
+   "content": "Meet Lily, a curious girl who one day finds a magical kite in her backyard. When she flies the kite, it magically lifts her off the ground, taking her on an incredible adventure through the clouds. Lily learns that sometimes, the most magical things can happen when you least expect them.",
+   "date": "01/28/24"
+  },
+  {
+   "title": "The Boy Who Cried Wolf",
+   "description": "Lying breaks trust, and no one believes a liar \u2014 even when they tell the truth.",
+   "content": "Once, there was a boy who became bored when he watched over the village sheep grazing on the hillside. To entertain himself, he sang out, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d  When the villagers heard the cry, they ran up the hill to drive the wolf away. But when they arrived, they saw no wolf. The boy was amused when he saw their angry faces.  \u201cDon\u2019t scream wolf when there is no wolf, boy!\u201d the villagers warned. They angrily went back down the hill.  Later, the shepherd boy cried out once again, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d To his amusement, the villagers came running up the hill to scare the wolf away.  As they saw there was no wolf, they said strictly, \u201cSave your frightened cry for when there really is a wolf! Don\u2019t cry \u2018wolf\u2019 when there is no wolf!\u201d But the boy grinned at their words while they walked, grumbling down the hill once more.  Later, the boy saw a real wolf sneaking around his flock. Alarmed, he jumped on his feet and cried out as loud as he could, \u201cWolf! Wolf!\u201d But the ",
+   "date": "01/30/24"
+  },
+  {
+   "title": "new story",
+   "description": "a new story for testing",
+   "content": "bla bla bla",
+   "date": "01/27/24"
+  },
+  {
+   "title": "The Boy Who Cried Wolf 2",
+   "description": "Lying breaks trust, and no one believes a liar \u2014 even when they tell the truth.",
+   "content": "Once, there was a boy who became bored when he watched over the village sheep grazing on the hillside. To entertain himself, he sang out, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d  When the villagers heard the cry, they ran up the hill to drive the wolf away. But when they arrived, they saw no wolf. The boy was amused when he saw their angry faces.  \u201cDon\u2019t scream wolf when there is no wolf, boy!\u201d the villagers warned. They angrily went back down the hill.  Later, the shepherd boy cried out once again, \u201cWolf! Wolf! The wolf is chasing the sheep!\u201d To his amusement, the villagers came running up the hill to scare the wolf away.  As they saw there was no wolf, they said strictly, \u201cSave your frightened cry for when there really is a wolf! Don\u2019t cry \u2018wolf\u2019 when there is no wolf!\u201d But the boy grinned at their words while they walked, grumbling down the hill once more.  Later, the boy saw a real wolf sneaking around his flock. Alarmed, he jumped on his feet and cried out as loud as he could, \u201cWolf! Wolf!\u201d But the ",
+   "date": "01/30/24"
+  }
+ ]
+}
