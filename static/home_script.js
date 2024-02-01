@@ -1,71 +1,71 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let current_page = window.location.pathname;
+    let currentPage = window.location.pathname;
     
     // current user
-    let is_user=localStorage.getItem("current_user"); 
+    let isUser=localStorage.getItem("currentUser"); 
 
     
 // home page for 2 cases
-if(current_page='/' || current_page.startsWith('/user')){
+if(currentPage='/' || currentPage.startsWith('/user')){
     // PAGE ELEMENTS
-    let story_cards = document.getElementsByClassName('story_card');
-    let login_button = document.getElementById('login_button');
-    let sign_button = document.getElementById('sign_button');
-    let add_story_button = document.getElementById('add_story_button');
-    let logout_button = document.getElementById('logout_button');
-    let name_p =document.getElementById("name_p");
-    const rundom_button=document.getElementById("rundom_button")
-    let no_stoyies=story_cards.length;
+    let storyCards = document.getElementsByClassName('story_card');
+    let loginButton = document.getElementById('login_button');
+    let signButton = document.getElementById('sign_button');
+    let addStoryButton = document.getElementById('add_story_button');
+    let logoutButton = document.getElementById('logout_button');
+    let nameP =document.getElementById("name_p");
+    const rundomButton=document.getElementById("rundom_button")
+    let noStoyies=storyCards.length;
 
 function user_mode (){
     // display name & enable  -edit -delete -add -logout
     // hide sign buttons
-        sign_button.style.display = "none";
-        login_button.style.display = "none";
+        signButton.style.display = "none";
+        loginButton.style.display = "none";
     // display add & sign out
-        add_story_button.style.display = "inline-block";
-        logout_button.style.display = "inline-block";
+        addStoryButton.style.display = "inline-block";
+        logoutButton.style.display = "inline-block";
     // can log out-->clear local storage
     // and redirect to home page
-        logout_button.addEventListener("click", function(){
+        logoutButton.addEventListener("click", function(){
         localStorage.clear();
         window.location.href = '/';
         }) }
     
     // display all story when clicked...for all cards
-        for (const story_card of story_cards) {
-            story_card.addEventListener('click', function() {
-                let card_id = story_card.id;
+        for (const storyCard of storyCards) {
+            storyCard.addEventListener('click', function() {
+                let card_id = storyCard.id;
                 window.location.href = '/story/'+card_id;
             }); }
 
-        if (no_stoyies==0){
-            rundom_button.style.display = "none";
+        if (noStoyies==0){
+            rundomButton.style.display = "none";
         }    
 
-            function get_rundom()
+            function getRundom()
             {
-            let randomNumber = Math.floor(Math.random() * no_stoyies) + 0;
+            let randomNumber = Math.floor(Math.random() * noStoyies) + 0;
             window.location.href = '/story/'+randomNumber;
             }
             // rundom story 
-            rundom_button.addEventListener("click",get_rundom);    
+            rundomButton.addEventListener("click",getRundom);    
  
         // default case
-        if(current_page='/'){
-            if (is_user==null){
-            add_story_button.style.display = "none";
-            logout_button.style.display = "none";  }
+        if(currentPage='/'){
+            if (isUser==null){
+            addStoryButton.style.display = "none";
+            logoutButton.style.display = "none";  }
             else{
                 user_mode();
-                name_p.innerText=localStorage.getItem("current_user")
+                nameP.innerText=localStorage.getItem("currentUser")
             }
             }
         // only users....
         if (window.location.pathname.startsWith('/user')) {
             // store user
-            const user_name=name_p.innerText
-            localStorage.setItem("current_user",user_name);
+            const userName=nameP.innerText
+            localStorage.setItem("currentUser",userName);
 
             user_mode();  
             }
