@@ -15,10 +15,10 @@
                    let's read a new story...
                </p>
                </div>
-            <button  id="login_button"><a href="/login">log in</a></button>
-            <button  id="sign_button"><a href="/signup">sign up</a></button>
-            <button  id="add_story_button" style="background-color: #79a82e;"> 
-                <a style="background-color: #79a82e;" href="/add_story" >add story </a> </button>
+            <a id="login_button" href="/login">log in</a>
+            <a  id="sign_button" href="/signup">sign up</a>
+            <a id="add_story_button"  href="/add_story" >add story</a>
+             
             <button  id="logout_button">log out</button>
             
             </nav>
@@ -31,9 +31,9 @@
         
         <div class="story_card" id="{{loop.index0}}">
             <!-- in card -->
-        <h3 class="story_element " style="background-color: #ffffff ;" > {{ story.title }}</h3>
-        <p class="story_element" > {{ story.description }} </p>
-        <p class="story_element"> {{ story.date }} </p>
+        <h3 class="story_element " style="height:25%" > {{ story.title }}</h3>
+        <p class="story_element" style="height:50%"> {{ story.description }} </p>
+        <p class="story_element" style="height:0%"> {{ story.date }} </p>
         </div>
         {% endfor %}
     </div>

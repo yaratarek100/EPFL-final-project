@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 body{
-    min-height: 100vh;
     background-color: #e6f4f9;
     display: flex;
     font-family: sans-serif;
@@ -14,7 +13,7 @@ body{
 .container , .story_card{
     margin: auto;
     padding: inherit;
-    width: 50%;
+    width: 70%;
     background-color: white;
     border-radius: 5px;
     box-shadow: 9px 11px 16px #0000007a;
@@ -24,11 +23,11 @@ body{
 /* home */
 
 nav {
-padding: 5%;
+padding: 2%;
 position: absolute;
 display: block;
 top: 0;
-height:    334px; ;
+height: 350px; 
 width: 100%;
 background-color: white;
 text-align: left;
@@ -41,29 +40,43 @@ img{
     mask-image: linear-gradient(to right, transparent 2%, black 10%);
     z-index: -1;
 }
-nav button{
+nav button ,nav a ,#rundom_button{
     display: inline-block;
+    min-width: fit-content;
     width: 9%;
     height: 40px;
     margin: 1%;
     font-size: 1.5rem;
+    text-align: center;
+    padding: .5% ;
+    box-shadow: 3px 3px 4px #00000065;
 }
+
+/* style="background-color: #79a82e;" */
+
 
 nav p{
     font-size: 244%;
     margin: 1.5%;
     color: #9f4404;
     font-family: cursive;
+    background-color: rgba(255, 255, 255, 0.534);
+     border-radius: 20px; 
+     display: inline-block; 
+     width: fit-content;
 }
     
-.story_card .story_element, .story_card,#dis_cont {
+.story_card .story_element, .story_card,#dis_cont ,#rundom_button{
+
     background-color: #FABF4D;
 }
 
 #rundom_button{
     position: absolute;
-    top: 260px;
+    top: 250px;
     z-index: 4;
+    left: 4%;
+    width: 15%;
 }
 
 #home{
@@ -77,7 +90,7 @@ nav p{
 #stories_container{
     position: absolute;
     top: 390px;
-    padding: 0% 0%;
+    padding: 3%;
     width: 100%;
     text-align: center;
     display: inline-flex;
@@ -87,19 +100,18 @@ nav p{
     justify-content:flex-start;
 }
 .story_card{
-    width: 18%;
     display: inline-block;
-    max-height: 300px;
-    min-height: 300px;
+    height: 350px;
     padding: 1%;
-    margin: 3%;
+    margin: 1.5%;
+    width: 17%;
+    min-width: 212px;
 }
 
 /* all forms (login-logout-add-edite) */
 .form_title , .res {
 margin-bottom: 5%;
 }
-
 .last{
     margin-top: 6%;
 }
@@ -107,12 +119,13 @@ margin-bottom: 5%;
 input[type="text"], input[type="password"] ,.story_element {
     margin: .7%;
     width: 100%;
-    height: 27px;
     border-radius: 15px;
     background-color: white;
     border: 1px solid #e5a666;
     text-align: center;
 }
+
+input { height: 30px;}
 
 .story_element{
     margin-top: 5%;
@@ -121,6 +134,8 @@ input[type="text"], input[type="password"] ,.story_element {
     padding: 9%;
     border-radius: 4px;
     }
+
+
 input[type="submit"]:hover, button:hover , a :hover {
     opacity: .7;
 }
@@ -154,4 +169,22 @@ input[type="submit"], button , a {
 
 #delet_button{
     background-color: #C92A27;
+}
+
+#add_story_button{
+    background-color: #a5d25e;
+}
+
+@media (max-width : 630px) {
+
+    nav{padding: 3%;}
+
+    .story_card{margin: 3%;}
+
+    .story_button {
+       
+        padding: 2% ;
+        margin: 3px 2.5%;
+        width: 43%;
+    }
 }
