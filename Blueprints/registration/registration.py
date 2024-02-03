@@ -11,18 +11,13 @@ def home ():
     username="Dear"
     return render_template('home.html', data=data, name=username) 
 
-# @user_bp.route("/user/<username>")
-# def user_home(username):
-#     data =read_file(stories_file)  
-#     return render_template('home.html', data=data, name=username) 
-
 @user_bp.route("/user")
 def user_home():
     if 'username' in session:
         username = session['username']
     data =read_file(stories_file)  
     return render_template('home.html', data=data, name=username)     
-
+    
 @user_bp.route("/login")
 def go_login() :  
      mass =""

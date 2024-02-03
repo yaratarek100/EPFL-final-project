@@ -8,30 +8,37 @@ users_file ='data/users_data.json'
 
 # class
 class story :
-    def __init__(self,title,description,content,date) :
+    def __init__(self,title,description,content) :
         self.title=title
         self.description=description
         self.content=content
+        
+    #method 1 (adding date with datetime module)
+    def add_date(self) :
+        # date formating
+        date_now=(datetime.datetime.now())
+        date=str(date_now.strftime("%x"))
         self.datetime =date 
-    #  method (obj-->dec) for json file
+
+    #  method 2 (obj-->dec) for json file
     def convert_to_dectinary (self):
         dectionary = { 
         "title": self.title,
         "description" :self.description,
         "content": self.content ,
         "date": self.datetime }
-        return dectionary    
+        return dectionary   
+        
     
 #functions 
 def create_story ():
     title = flask.request.args.get("story_title")
     description = flask.request.args.get("story_description")
     content= flask.request.args.get("story_content")
-    # date formating
-    date_now=(datetime.datetime.now())
-    date=str(date_now.strftime("%x"))
+    
     # object creation & converting
-    story_obj = story(title,description,content,date) 
+    story_obj = story(title,description,content) 
+    story_obj.add_date()
     story_dec =story_obj.convert_to_dectinary()
     return story_dec
     
