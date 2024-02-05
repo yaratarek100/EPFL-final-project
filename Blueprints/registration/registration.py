@@ -14,9 +14,13 @@ def home ():
 @user_bp.route("/user")
 def user_home():
     if 'username' in session:
-        username = session['username']
-    data =read_file(stories_file)  
-    return render_template('home.html', data=data, name=username)     
+        if session['username']!= False :
+            username = session['username']
+            session['username'] =False
+            data =read_file(stories_file)  
+            return render_template('home.html', data=data, name=username)   
+        else :
+            abort(404)  
     
 @user_bp.route("/login")
 def go_login() :  
@@ -46,7 +50,6 @@ def su_check() :
             new_user= creat_new_user(user_name_new,pass_wored_new1)
             data['users'].append(new_user)
             write_file (users_file, data)
-            # return redirect (url_for("user.user_home" ,username=user_name_new))
             session['username'] = user_name_new
             return redirect (url_for("user.user_home"))
         else :
@@ -61,9 +64,7 @@ def logincheck() :
      users=data['users']
      for user in users :
          if user['name']==ui_name  :
-            # user_found = True 
             if user['password']==ui_pass :
-                # return redirect (url_for("user.user_home", username=ui_name) )
                 session['username'] = ui_name
                 return redirect (url_for("user.user_home"))
                        
